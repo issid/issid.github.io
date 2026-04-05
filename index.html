@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="application-name" content="issid.pro">
+<meta name="description" content="Personal Area">
+<meta name="apple-mobile-web-app-title" content="issid.pro">
+<meta name="msapplication-starturl" content="/">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+<link rel="manifest" href="manifest.json">
+
+<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+
+<link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+
+<title>IssID.pro</title>
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<div class="parent">
+    <div class="block">
+        <div class="text-component">
+            <div class="text">IssID</div>
+        </div>
+    </div>
+    <div class="links">
+        <div><a href="https://gitlab.com/users/IssID/projects" target="_blank"><img src="/icons/gitlab.ico" alt="gitlab" width="32" height="32"></a></div>
+        <div><a href="https://github.com/issid?tab=repositories" target="_blank"><img src="/icons/github.svg" alt="github" width="32" height="32"></a></div>
+        <div><a href="https://t.me/IssID" target="_blank"><img src="/icons/tg.ico" alt="telegram" width="32" height="32"></a></div>
+    </div>
+</div>
+<script src="./js/main.js"></script>
+<script>
+if ('serviceWorker' in navigator) {
+ window.addEventListener('load', function() {  
+   navigator.serviceWorker.register('sw.js').then(
+     function(registration) {
+       // Registration was successful
+       console.log('ServiceWorker registration successful with scope: ', registration.scope); },
+     function(err) {
+       // registration failed :(
+       console.log('ServiceWorker registration failed: ', err);
+     });
+ });
+}
+</script>
+</body>
+</html>
